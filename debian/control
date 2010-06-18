@@ -1,0 +1,29 @@
+Source: kronolith2
+Section: web
+Priority: optional
+Maintainer: Horde Maintainers <pkg-horde-hackers@lists.alioth.debian.org>
+Uploaders: Carl Fürstenberg <carl@excito.com>, Ola Lundqvist <opal@debian.org>, Lionel Elie Mamane <lmamane@debian.org>, Gregory Colpart (evolix) <reg@evolix.fr>
+Build-Depends: debhelper (>= 7.2)
+Vcs-Arch: http://arch.debian.org/arch/pkg-horde/2006/kronolith--sid--2
+Vcs-Browser: http://arch.debian.org/cgi-bin/archzoom.cgi/pkg-horde-hackers%40lists.alioth.debian.org--2006/kronolith?expand
+Standards-Version: 3.8.4
+Homepage: http://www.horde.org/kronolith/
+
+
+Package: kronolith2
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, horde3, kronolith2-base (= ${source:Version})
+Suggests: imp4, nag2
+Description: calendar component for Horde Framework
+ Kronolith is a web-based calendar system written in PHP and utilizing the
+ Horde Application Framework.
+
+Package: kronolith2-base
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, horde3-base (>= 3.3), php5-mysql | php5-pgsql | php4-mcal | php4-mysql | php4-pgsql, php5-cli | php4-cli, php-date, php-http-request
+Suggests: imp4-base, nag2-base
+Description: calendar component for Horde Framework
+ Kronolith is a web-based calendar system written in PHP and utilizing the
+ Horde Application Framework.
+ .
+ This package contains the base files.

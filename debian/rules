@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh  $@
+
+override_dh_installchangelogs:
+	dh_installchangelogs docs/CHANGES
+
+override_dh_installdocs:
+	dh_installdocs -X docs/CHANGES -X docs/INSTALL
+
+override_dh_install: 
+	dh_install
+	for i in $$(find debian/kronolith2-base -name "*.php*"); do \
+		cat $$i | \
+		sed -e "s/define('HORDE_BASE'.*;/define\('HORDE_BASE', '\/usr\/share\/horde3\'\);/" |\
+		sed -e "s/define('KRONOLITH_BASE'.*;/define\('KRONOLITH_BASE', '\/usr\/share\/horde3\/kronolith'\);/" |\
+		sed -e "s/\/usr\/local\/bin/\/usr\/bin/" > $$i.rew; \
+		cat $$i.rew > $$i; \
+		rm -f $$i.rew; \
+		done
+	#### create htaccess  to restrict acess by web ####
+	echo "Deny from all" > debian/kronolith2-base/usr/share/horde3/kronolith/scripts/.htaccess
+	find debian/kronolith2-base -regex '.*\.\(xml\|png\|gif\|css\|js\|jpg|html\)$$' -type f -exec chmod -x '{}' \;
+	#### copy configuration files ####
+	for i in config/*.dist; do \
+		NAME=etc/horde/kronolith2/$$(basename $$i ".dist"); \
+		cp -a $$i debian/kronolith2/$$NAME; \
+		done
+	touch debian/kronolith2/etc/horde/kronolith2/conf.php
+	#### create htaccess  to restrict acess by web ####
+	echo "Deny from all" > debian/kronolith2/etc/horde/kronolith2/.htaccess

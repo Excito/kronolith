@@ -1,0 +1,12 @@
+calendars /usr/share/horde3/kronolith
+feed /usr/share/horde3/kronolith
+js /usr/share/horde3/kronolith
+lib /usr/share/horde3/kronolith
+locale /usr/share/horde3/kronolith
+templates /usr/share/horde3/kronolith
+themes /usr/share/horde3/kronolith
+
+*.php /usr/share/horde3/kronolith
+
+scripts/reminders.php /usr/share/horde3/kronolith/scripts
+docs/CREDITS /usr/share/horde3/kronolith/docs/

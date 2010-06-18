@@ -1,0 +1,179 @@
+kronolith2 (2.3.4-1) vincent; urgency=low
+
+  * New upstream release
+
+ -- Carl Fürstenberg <carl@excito.com>  Fri, 18 Jun 2010 16:32:11 +0200
+
+kronolith2 (2.3.2-3) vicent; urgency=low
+
+  * remove php5-mcal 
+
+ -- Carl Fürstenberg <carl@excito.com>  Mon, 14 Jun 2010 13:03:12 +0200
+
+kronolith2 (2.3.2-2) vincent; urgency=low
+
+  * B3
+  * Source format
+  * drop cdbs
+
+ -- Carl Fürstenberg <carl@excito.com>  Wed, 09 Jun 2010 17:09:50 +0200
+
+kronolith2 (2.3.2-1) claire; urgency=low
+
+  * New upstream release
+
+ -- Carl Fürstenberg <carl@excito.com>  Wed, 16 Sep 2009 10:27:20 +0200
+
+kronolith2 (2.3-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Carl Fürstenberg <carl@excito.com>  Fri, 10 Oct 2008 17:09:20 +0200
+
+kronolith2 (2.2-1ex2) unstable; urgency=low
+
+  * moving the cron config to bubba-horde package
+
+ -- Carl Fürstenberg <carl@excito.com>  Sat, 30 Aug 2008 23:57:58 +0200
+
+kronolith2 (2.2-1ex1) unstable; urgency=low
+
+  * Removed the configuration 
+
+ -- Carl Fürstenberg <carl@excito.com>  Wed, 25 Jun 2008 16:59:01 +0200
+
+kronolith2 (2.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Carl Fürstenberg <azatoth@gmail.com>  Wed, 25 Jun 2008 16:56:42 +0200
+
+kronolith2 (2.1.8-2) unstable; urgency=low
+
+  * UNRELEASED
+  * Add CVE id in last changelog entry.
+
+ -- Gregory Colpart (evolix) <reg@evolix.fr>  Wed, 30 Apr 2008 23:26:50 +0200
+
+kronolith2 (2.1.8-1) unstable; urgency=high
+
+  * New upstream release.
+  * Fix XSS vulnerability in the add event screen (see CVE-2008-1974 for more
+    informations). (Closes: #478121)
+  * debian/copyright file improvements. 
+
+ -- Gregory Colpart (evolix) <reg@evolix.fr>  Mon, 28 Apr 2008 01:39:49 +0200
+
+kronolith2 (2.1.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use now Vcs-* fields in debian/control.
+  * Put the CREDITS file where the online help viewer expects it (See
+    #357377).
+  * Update to standards version 3.7.3, no further required changes.
+  * Bump debhelper compat level to 5.
+  * Add Homepage field.
+  * Fix confusion between binary-arch and binary-indep in debian/rules.
+  * Change /usr/bin/php4 to /usr/bin/php for cron script. (Closes: #413292)
+  * Correct /dev/null output in cron script. 
+
+ -- Gregory Colpart (evolix) <reg@evolix.fr>  Sat, 09 Feb 2008 18:29:40 +0100
+
+kronolith2 (2.1.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Move php*-cli from Recommends to Depends to fix a lintian warning.
+  * Remove exec right for XML files in debian/rules.
+  * Clean arch files in debian/rules.
+  * Remove locales from Recommends field (now in horde3 recommends).
+  * Added XS-VCS-* fields in debian/control. 
+
+ -- Gregory Colpart (evolix) <reg@evolix.fr>  Wed, 25 Jul 2007 04:31:36 +0200
+
+kronolith2 (2.1.4-1) unstable; urgency=high
+
+  * New upstream release:
+    - Don't allow access to arbitrary files (closes: #400899)
+      CVE: unknown
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Wed, 29 Nov 2006 19:06:01 +0100
+
+kronolith2 (2.1.3-2) unstable; urgency=medium
+
+  * Added php5-* dependencies. Closes: #399855
+  * Added Homepage in control file.
+
+ -- Horde Maintainers <pkg-horde-hackers@lists.alioth.debian.org>  Thu, 24 Aug 2006 20:17:26 -0300
+
+kronolith2 (2.1.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump up Standards-Version
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Sun,  5 Nov 2006 12:05:54 +0100
+
+kronolith2 (2.1-2) UNRELEASED; urgency=low
+
+  * Put debhelper in Build-Depends, not B-D-Indep.
+
+ -- Lionel Elie Mamane <lmamane@debian.org>  Fri, 16 Jun 2006 11:17:46 +0200
+
+kronolith2 (2.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jose Carlos Medeiros <jose@psabs.com.br>  Tue,  7 Mar 2006 17:56:35 -0300
+
+kronolith2 (2.0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * This release solved "Several Cross-Site-Scripting vulnerabilities"
+    (CVE-2005-4189). (closes: #342943)
+  * Set Maintainer to Debian Horde Team.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Wed, 14 Dec 2005 11:48:55 -0200
+
+kronolith2 (2.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 14 Nov 2005 17:11:54 -0200
+
+kronolith2 (2.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated package to Standards-Version: 3.6.2.
+  * Updated License in debian/copyright.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon, 17 Oct 2005 15:57:11 -0200
+
+kronolith2 (2.0.3-2) unstable; urgency=low
+
+  * Added php-http-request as required in control. (closes: #308663)
+  * Changed rules and README.Debian No longer provides config.bak file.
+    (closes: #308993)
+  * Added locales as recommended.
+  * Moved dh_installexamples to "install" rule in rules file. Now
+    examples/* files are changed like others.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Thu, 28 Jul 2005 19:24:39 -0300
+
+kronolith2 (2.0.3-1) unstable; urgency=low
+
+  * Initial upload of this package, closes: #303116.
+  * New upstream release.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Mon,  2 May 2005 12:28:17 -0300
+
+kronolith2 (2.0.2-1) unstable; urgency=low
+
+  * Made Ola Lundqvist co maintainer.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Tue, 19 Apr 2005 19:10:56 -0300
+
+kronolith2 (2.0.2-0) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Jose Carlos Medeiros <debian@psabs.com.br>  Tue, 22 Feb 2005 17:45:32 -0300
+
