@@ -42,6 +42,7 @@ $object->recurrence = new Horde_Date_Recurrence($object->start);
 $object->recurrence->setRecurType(HORDE_DATE_RECUR_MONTHLY_DATE);
 $object->recurrence->setRecurInterval(1);
 $object->recurrence->addException(2007, 4, 15);
+$object->recurrence->addException(2007, 6, 15);
 $object->setAttendees(
     array('juergen@example.com' =>
           array('attendance' => KRONOLITH_PART_REQUIRED,
@@ -141,7 +142,7 @@ ATTENDEE;EXPECT=FYI;STATUS=DECLINED:Jack Doe <jack@example.com>
 ATTENDEE;EXPECT=FYI;STATUS=TENTATIVE:jenny@example.com
 AALARM:20070315T120020Z
 RRULE:MD1 15 #0
-EXDATE:20070415T111020Z
+EXDATE:20070415T111020Z;20070615T111020Z
 END:VEVENT
 END:VCALENDAR
 
@@ -166,7 +167,7 @@ ATTENDEE;ROLE=NON-PARTICIPANT;PARTSTAT=DECLINED;CN=Jack
   Doe:mailto:jack@example.com
 ATTENDEE;ROLE=NON-PARTICIPANT;PARTSTAT=TENTATIVE:mailto:jenny@example.com
 RRULE:FREQ=MONTHLY;INTERVAL=1
-EXDATE:20070415T111020Z
+EXDATE:20070415T111020Z,20070615T111020Z
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER;VALUE=DURATION:-PT10M

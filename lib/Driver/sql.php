@@ -3,7 +3,7 @@
  * The Kronolith_Driver_sql:: class implements the Kronolith_Driver
  * API for a SQL backend.
  *
- * $Horde: kronolith/lib/Driver/sql.php,v 1.136.2.46 2009/11/11 07:59:18 jan Exp $
+ * $Horde: kronolith/lib/Driver/sql.php,v 1.136.2.48 2010/05/13 17:24:33 jan Exp $
  *
  * @author  Luc Saillard <luc.saillard@fr.alcove.com>
  * @author  Chuck Hagenbuch <chuck@horde.org>
@@ -241,10 +241,7 @@ class Kronolith_Driver_sql extends Kronolith_Driver {
      */
     function listEvents($startDate = null, $endDate = null, $hasAlarm = false)
     {
-        $endInterval = $startInterval = null;
-        if (!empty($endDate)) {
-            list($endInterval->mday, $endInterval->month, $endInterval->year) = explode('/', Date_Calc::nextDay($endDate->mday, $endDate->month, $endDate->year, '%d/%m/%Y'));
-        }
+        $startInterval = $endInterval = null;
         if (!empty($startDate)) {
             $startInterval = new Horde_Date($startDate);
             if ($startInterval->month == 0) {
@@ -253,6 +250,9 @@ class Kronolith_Driver_sql extends Kronolith_Driver {
             if ($startInterval->mday == 0) {
                 $startInterval->mday = 1;
             }
+        }
+        if (!empty($endDate)) {
+            $endInterval = new Horde_Date($endDate);
         }
 
         return $this->listEventsConditional($startInterval, $endInterval,

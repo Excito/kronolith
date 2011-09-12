@@ -2,7 +2,7 @@
 /**
  * Kronolith external API interface.
  *
- * $Horde: kronolith/lib/api.php,v 1.126.2.66 2009/12/22 22:36:44 jan Exp $
+ * $Horde: kronolith/lib/api.php,v 1.126.2.68 2011/07/02 17:25:08 jan Exp $
  *
  * This file defines Kronolith's external API interface. Other applications
  * can interact with Kronolith through this API.
@@ -164,27 +164,6 @@ function _kronolith_removeUserData($user)
 
     /* Remove all events owned by the user in all calendars. */
     $result = $kronolith_driver->removeUserData($user);
-
-    /* Now delete history as well. */
-    $history = &Horde_History::singleton();
-    if (method_exists($history, 'removeByParent')) {
-        $histories = $history->removeByParent('kronolith:' . $user);
-    } else {
-        /* Remove entries 100 at a time. */
-        $all = $history->getByTimestamp('>', 0, array(), 'kronolith:' . $user);
-        if (is_a($all, 'PEAR_Error')) {
-            Horde::logMessage($all, __FILE__, __LINE__, PEAR_LOG_ERR);
-        } else {
-            $all = array_keys($all);
-            while (count($d = array_splice($all, 0, 100)) > 0) {
-                $history->removebyNames($d);
-            }
-        }
-    }
-
-    if (is_a($result, 'PEAR_Error')) {
-        return $result;
-    }
 
     /* Get the user's default share */
     $share = $GLOBALS['kronolith_shares']->getShare($user);
@@ -994,6 +973,7 @@ function _kronolith_delete($uid)
         $ownerCalendars = Kronolith::listCalendars(true, PERMS_DELETE);
         foreach ($events as $ev) {
             if (Auth::isAdmin() || isset($ownerCalendars[$ev->getCalendar()])) {
+                $kronolith_driver->open($ev->getCalendar());
                 $event = $ev;
                 break;
             }

@@ -1,4 +1,25 @@
 ------
+v2.3.6
+------
+
+[jan] Add upgrade scripts for next-generation SQL share driver.
+[jan] Export recurrence exceptions in a more portable way.
+
+
+------
+v2.3.5
+------
+
+[gwr] Fix moving events between calendars for the Kolab driver (Bug #7932)
+[jan] Import and export the privacy field in CSV data (Request #9139).
+[mjr] Send an iTip REQUEST, not ADD, when updating an existing event
+      (Bug #9131).
+[jan] Fix all-day events sometimes showing up an day early too (Bug #9012).
+[mjr] Sort exception list before displaying (Request #7688).
+[mjr] Do not remove history entries when removing user data (Bug #8755).
+
+
+------
 v2.3.4
 ------
 

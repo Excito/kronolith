@@ -1,6 +1,6 @@
 <?php
 /**
- * $Horde: kronolith/data.php,v 1.72.2.17 2009/01/06 15:24:43 jan Exp $
+ * $Horde: kronolith/data.php,v 1.72.2.18 2010/07/27 17:22:49 jan Exp $
  *
  * Copyright 2001-2009 The Horde Project (http://www.horde.org/)
  *
@@ -131,6 +131,7 @@ case 'export':
                 $row['location'] = $event->location;
                 $row['description'] = $event->description;
                 $row['keywords'] = implode(',', $event->keywords);
+                $row['private'] = (int)$event->private;
                 $row['start_date'] = sprintf('%d-%02d-%02d', $event->start->year, $event->start->month, $event->start->mday);
                 $row['start_time'] = sprintf('%02d:%02d:%02d', $event->start->hour, $event->start->min, $event->start->sec);
                 $row['end_date'] = sprintf('%d-%02d-%02d', $event->end->year, $event->end->month, $event->end->mday);

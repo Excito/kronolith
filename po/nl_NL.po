@@ -1,14 +1,14 @@
 # Kronolith Dutch translation.
 # Copyright 2001 Jan Kuipers.
-# Jan Kuipers <jrkuipers@lauwerscollege.nl>, 2001-2009.
+# Jan Kuipers <jrkuipers@lauwerscollege.nl>, 2001-2010.
 # Updated Han Spruyt, 2005.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Kronolith H3 (2.3.3-cvs)\n"
+"Project-Id-Version: Kronolith H3 (2.3.5-cvs)\n"
 "Report-Msgid-Bugs-To: dev@lists.horde.org\n"
-"POT-Creation-Date: 2009-12-14 08:18+0100\n"
-"PO-Revision-Date: 2009-12-14 20:27+0100\n"
+"POT-Creation-Date: 2010-06-11 23:08+0200\n"
+"PO-Revision-Date: 2010-06-11 23:45+0200\n"
 "Last-Translator: Jan Kuipers <jrkuipers@lauwerscollege.nl>\n"
 "Language-Team: Dutch <i18n@lists.horde.org>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "%d maal"
 msgid "%s Day(s) %s Hour(s) %s Minutes"
 msgstr "%s dag(en) %s uren %s minuten"
 
-#: lib/Driver.php:2304
+#: lib/Driver.php:2315
 #, php-format
 msgid "%s attendees"
 msgstr "%s aanwezigen"
@@ -72,7 +72,7 @@ msgstr "* Selecteer adres(sen), a.u.b. *"
 msgid ", %d times"
 msgstr ", %d maal"
 
-#: lib/Driver.php:2303
+#: lib/Driver.php:2314
 msgid "1 attendee"
 msgstr "1 aanwezige"
 
@@ -149,39 +149,39 @@ msgstr "Uitgebreid zoeken"
 msgid "Alarm"
 msgstr "Alarm"
 
-#: lib/Driver.php:2267
+#: lib/Driver.php:2278
 #, php-format
 msgid "Alarm %d days before"
 msgstr "Alarm %d dagen voor"
 
-#: lib/Driver.php:2272
+#: lib/Driver.php:2283
 #, php-format
 msgid "Alarm %d hours before"
 msgstr "Alarm %d uren voor"
 
-#: lib/Driver.php:2277
+#: lib/Driver.php:2288
 #, php-format
 msgid "Alarm %d minutes before"
 msgstr "Alarm %d minuten voor"
 
-#: lib/Driver.php:2262
+#: lib/Driver.php:2273
 #, php-format
 msgid "Alarm %d weeks before"
 msgstr "Alarm %d weken voor"
 
-#: lib/Driver.php:2266
+#: lib/Driver.php:2277
 msgid "Alarm 1 day before"
 msgstr "Alarm 1 dag voor"
 
-#: lib/Driver.php:2271
+#: lib/Driver.php:2282
 msgid "Alarm 1 hour before"
 msgstr "Alarm 1 uur voor"
 
-#: lib/Driver.php:2276
+#: lib/Driver.php:2287
 msgid "Alarm 1 minute before"
 msgstr "Alarm 1 minuut voor"
 
-#: lib/Driver.php:2261
+#: lib/Driver.php:2272
 msgid "Alarm 1 week before"
 msgstr "Alarm 1 week voor"
 
@@ -238,12 +238,12 @@ msgstr "Alle afgelopen"
 msgid "All Visible"
 msgstr "Alle zichtbaar"
 
-#: lib/Driver.php:2372 lib/Block/month.php:187 lib/Views/Week.php:149
-#: lib/Views/Week.php:156 lib/Views/Day.php:99 lib/Views/Day.php:102
+#: lib/Driver.php:2383 lib/Block/month.php:187 lib/Views/Week.php:149
+#: lib/Views/Week.php:156 lib/Views/Day.php:102 lib/Views/Day.php:105
 #: lib/Views/Year.php:158 lib/Scheduler/kronolith.php:445
 #: lib/Scheduler/kronolith.php:458 templates/edit/edit_timespan.inc:119
 msgid "All day"
-msgstr "De gehele dag"
+msgstr "Hele dag"
 
 #: lib/Block/summary.php:170 templates/view/view.inc:36
 msgid "All day event"
@@ -253,14 +253,14 @@ msgstr "Gehele dag durende gebeurtenis"
 msgid "All events"
 msgstr "Alle gebeurtenissen"
 
-#: lib/Maintenance/Task/purge_events.php:72
+#: lib/Maintenance/Task/purge_events.php:73
 #, php-format
 msgid "All of your events older than %d days will be permanently deleted."
 msgstr ""
 "Al uw gebeurtenissen, ouder dan %d dagen, zullen definitief worden "
 "verwijderd."
 
-#: lib/api.php:811 lib/api.php:823
+#: lib/api.php:790 lib/api.php:802
 msgid "Already Exists"
 msgstr "Bestaat al"
 
@@ -390,7 +390,7 @@ msgstr "Afgebroken"
 msgid "Cancelled: %s"
 msgstr "Afgebroken: %s"
 
-#: lib/Driver/kolab.php:1407
+#: lib/Driver/kolab.php:1413
 #, php-format
 msgid "Cannot delete event: %s"
 msgstr "Kan gebeurtenis niet verwijderen: %s"
@@ -532,7 +532,7 @@ msgstr "Maken"
 msgid "Create Calendar"
 msgstr "Maak agenda"
 
-#: lib/Views/Day.php:99 lib/Views/Day.php:261 lib/Views/Month.php:174
+#: lib/Views/Day.php:102 lib/Views/Day.php:264 lib/Views/Month.php:174
 #: templates/week/head.inc:29
 msgid "Create a New Event"
 msgstr "Maak een nieuwe gebeurtenis"
@@ -597,7 +597,7 @@ msgstr "Standaard agenda"
 msgid "Delegate"
 msgstr "Overdragen"
 
-#: lib/Driver.php:1343 lib/Driver.php:2331 lib/Forms/DeleteCalendar.php:45
+#: lib/Driver.php:1345 lib/Driver.php:2342 lib/Forms/DeleteCalendar.php:45
 #: templates/calendar_list.php:54 templates/perms/perms.inc:54
 #: templates/perms/perms.inc:75 templates/perms/perms.inc:95
 #: templates/perms/perms.inc:116 templates/perms/perms.inc:136
@@ -609,18 +609,18 @@ msgstr "Overdragen"
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: lib/Driver.php:2330 lib/Forms/DeleteCalendar.php:40
+#: lib/Driver.php:2341 lib/Forms/DeleteCalendar.php:40
 #: lib/Views/DeleteEvent.php:29
 #, php-format
 msgid "Delete %s"
 msgstr "Verwijder %s"
 
-#: lib/Driver.php:1342
+#: lib/Driver.php:1344
 #, php-format
 msgid "Delete exception on %s"
 msgstr "Uitzondering op %s verwijderen"
 
-#: lib/Maintenance/Task/purge_events.php:59
+#: lib/Maintenance/Task/purge_events.php:60
 #, php-format
 msgid "Deleted %d event older than %d days."
 msgid_plural "Deleted %d events older than %d days."
@@ -669,19 +669,19 @@ msgstr "Vervaldatum: %s"
 msgid "Duration"
 msgstr "Tijdsduur"
 
-#: lib/Driver.php:2038
+#: lib/Driver.php:2049
 msgid "Duration Day"
 msgstr "Tijdsduur dag"
 
-#: lib/Driver.php:2050
+#: lib/Driver.php:2061
 msgid "Duration Hour"
 msgstr "Tijdsduur uur"
 
-#: lib/Driver.php:2061
+#: lib/Driver.php:2072
 msgid "Duration Minute"
 msgstr "Tijdsduur minuut"
 
-#: lib/Driver.php:2325 templates/calendar_list.php:40
+#: lib/Driver.php:2336 templates/calendar_list.php:40
 #: templates/calendar_list.php:50 templates/perms/perms.inc:53
 #: templates/perms/perms.inc:71 templates/perms/perms.inc:94
 #: templates/perms/perms.inc:112 templates/perms/perms.inc:135
@@ -693,7 +693,7 @@ msgstr "Tijdsduur minuut"
 msgid "Edit"
 msgstr "Bewerken"
 
-#: lib/Driver.php:2324 lib/Forms/EditCalendar.php:40
+#: lib/Driver.php:2335 lib/Forms/EditCalendar.php:40
 #: lib/Forms/EditRemoteCalendar.php:34 lib/Views/EditEvent.php:29
 #: templates/attendees/attendees.inc:57
 #, php-format
@@ -742,19 +742,19 @@ msgstr "Ein_de"
 msgid "End Date"
 msgstr "Einddatum"
 
-#: lib/Driver.php:2009 templates/data/export.inc:161
+#: lib/Driver.php:2020 templates/data/export.inc:161
 msgid "End Day"
 msgstr "Einddag"
 
-#: lib/Driver.php:2022 templates/data/export.inc:178
+#: lib/Driver.php:2033 templates/data/export.inc:178
 msgid "End Hour"
 msgstr "Einduur"
 
-#: lib/Driver.php:2033 templates/data/export.inc:190
+#: lib/Driver.php:2044 templates/data/export.inc:190
 msgid "End Minute"
 msgstr "Eindminuut"
 
-#: lib/Driver.php:2000 templates/data/export.inc:148
+#: lib/Driver.php:2011 templates/data/export.inc:148
 msgid "End Month"
 msgstr "Eindmaand"
 
@@ -767,7 +767,7 @@ msgstr "Eindigt op"
 msgid "End Time"
 msgstr "Eindtijd"
 
-#: lib/Driver.php:1989 templates/data/export.inc:134
+#: lib/Driver.php:2000 templates/data/export.inc:134
 msgid "End Year"
 msgstr "Eindjaar"
 
@@ -801,7 +801,7 @@ msgstr "Gebeurtenis verwijderd:"
 msgid "Event edited:"
 msgstr "Bewerkte gebeurtenis:"
 
-#: lib/Driver.php:1480
+#: lib/Driver.php:1484
 #, php-format
 msgid "Event from %s to %s"
 msgstr "Gebeurtenis van %s tot %s"
@@ -810,8 +810,8 @@ msgstr "Gebeurtenis van %s tot %s"
 msgid "Event not found"
 msgstr "Gebeurtenis niet gevonden"
 
-#: lib/Driver/kolab.php:453 lib/Driver/kolab.php:1192
-#: lib/Driver/kolab.php:1231 lib/Driver/kolab.php:1383
+#: lib/Driver/kolab.php:453 lib/Driver/kolab.php:1198
+#: lib/Driver/kolab.php:1237 lib/Driver/kolab.php:1389
 #, php-format
 msgid "Event not found: %s"
 msgstr "Gebeurtenis niet gevonden: %s"
@@ -820,16 +820,16 @@ msgstr "Gebeurtenis niet gevonden: %s"
 msgid "Events"
 msgstr "Gebeurtenissen"
 
-#: lib/api.php:315
+#: lib/api.php:294
 #, php-format
 msgid "Events from %s"
 msgstr "Gebeurtenissen van %s"
 
-#: lib/Driver.php:1074
+#: lib/Driver.php:1076
 msgid "Events must have a start date."
 msgstr "Gebeurtenis moet een startdatum hebben."
 
-#: lib/Driver.php:1036
+#: lib/Driver.php:1038
 msgid "Events must have a title."
 msgstr "Gebeurtenis moet een naam hebben."
 
@@ -904,7 +904,7 @@ msgstr "Groepen"
 msgid "Guest Permissions"
 msgstr "Gast rechten"
 
-#: templates/edit/javascript.inc:259
+#: templates/edit/javascript.inc:260
 msgid "Hide"
 msgstr "Verbergen"
 
@@ -1042,7 +1042,7 @@ msgstr "Lokaal"
 msgid "Local calendar owned by %s."
 msgstr "Lokale agenda eigendom van %s."
 
-#: data.php:65 lib/Driver.php:2354 templates/search/event_headers.inc:5
+#: data.php:65 lib/Driver.php:2365 templates/search/event_headers.inc:5
 #: templates/view/view.inc:14
 msgid "Location"
 msgstr "Locatie"
@@ -1081,7 +1081,7 @@ msgstr "Maximum aantal weer te geven gebeurtenissen (0 = geen limiet)"
 msgid "May"
 msgstr "Mei"
 
-#: lib/Driver.php:2350
+#: lib/Driver.php:2361
 msgid "Me"
 msgstr "Ik"
 
@@ -1146,7 +1146,7 @@ msgstr "Naar beneden"
 msgid "Move up"
 msgstr "Naar boven"
 
-#: lib/api.php:1066
+#: lib/api.php:1048
 msgid "Multiple iCalendar components found; only one vEvent is supported."
 msgstr ""
 "Meerdere iCalendar onderdelen gevonden; slecht één vEvent wordt ondersteund."
@@ -1227,7 +1227,7 @@ msgstr "Geen alarm"
 msgid "No attendees"
 msgstr "Geen aanwezigen"
 
-#: lib/api.php:1204
+#: lib/api.php:1186
 msgid ""
 "No attendees have been updated because none of the provided email addresses "
 "have been found in the event's attendees list."
@@ -1252,7 +1252,7 @@ msgstr "Geen einddatum"
 msgid "No events to display"
 msgstr "Geen gebeurtenissen weer te geven"
 
-#: lib/FreeBusy.php:234
+#: lib/FreeBusy.php:237
 #, php-format
 msgid "No free/busy information found at the free/busy url of %s."
 msgstr "Geen vrij/bezet informatie gevonden in de vrij/bezet url van %s."
@@ -1262,20 +1262,20 @@ msgstr "Geen vrij/bezet informatie gevonden in de vrij/bezet url van %s."
 msgid "No free/busy information is available for %s"
 msgstr "Geen vrij/bezet informatie beschikbaar voor %s"
 
-#: lib/FreeBusy.php:235
+#: lib/FreeBusy.php:238
 #, php-format
 msgid "No free/busy url found for %s."
 msgstr "Geen vrij/bezet url gevonden voor %s."
 
-#: lib/api.php:796 lib/api.php:836 lib/api.php:1073
+#: lib/api.php:775 lib/api.php:815 lib/api.php:1055
 msgid "No iCalendar data was found."
 msgstr "Geen iCalendardata gevonden."
 
-#: lib/Recurrence.php:198 lib/Driver.php:1327 templates/edit/edit.inc:221
+#: lib/Recurrence.php:198 lib/Driver.php:1329 templates/edit/edit.inc:221
 msgid "No recurrence"
 msgstr "Geen herhaling"
 
-#: lib/FreeBusy.php:166
+#: lib/FreeBusy.php:169
 msgid "No valid email address found"
 msgstr "Geen geldig e-mailadres gevonden"
 
@@ -1368,7 +1368,7 @@ msgstr "Eigenaar"
 msgid "Owner:"
 msgstr "Eigenaar:"
 
-#: lib/Driver.php:2349
+#: lib/Driver.php:2360
 #, php-format
 msgid "Owner: %s"
 msgstr "Eigenaar: %s"
@@ -1390,9 +1390,9 @@ msgstr "Patroon"
 msgid "Permanently delete this event?"
 msgstr "Deze gebeurtenis definitief verwijderen?"
 
-#: lib/api.php:678 lib/api.php:714 lib/api.php:746 lib/api.php:777
-#: lib/api.php:871 lib/api.php:918 lib/api.php:1013 lib/api.php:1045
-#: lib/api.php:1134 lib/api.php:1194 lib/api.php:1260 lib/api.php:1282
+#: lib/api.php:657 lib/api.php:693 lib/api.php:725 lib/api.php:756
+#: lib/api.php:850 lib/api.php:897 lib/api.php:995 lib/api.php:1027
+#: lib/api.php:1116 lib/api.php:1176 lib/api.php:1242 lib/api.php:1264
 #: lib/Kronolith.php:2004 lib/Kronolith.php:2023 lib/Kronolith.php:2036
 #: lib/Kronolith.php:2057 lib/Driver/sql.php:835
 #: lib/Block/prevmonthlist.php:75 lib/Block/summary.php:79
@@ -1445,12 +1445,12 @@ msgstr "Weergaven afdrukken"
 msgid "Prior Events"
 msgstr "Voorgaande gebeurtenissen"
 
-#: lib/Driver.php:1476
+#: lib/Driver.php:1480
 #, php-format
 msgid "Private Event from %s to %s"
 msgstr "Privé gebeurtenis van %s tot %s"
 
-#: lib/Driver.php:2294
+#: lib/Driver.php:2305
 msgid "Private event"
 msgstr "Privé gebeurtenis"
 
@@ -1510,15 +1510,15 @@ msgstr "Herhalingsdata"
 msgid "Recurrence End Date"
 msgstr "Herhalingseinddatum"
 
-#: lib/Driver.php:2104
+#: lib/Driver.php:2115
 msgid "Recurrence End Day"
 msgstr "Herhalingseinddag"
 
-#: lib/Driver.php:2089
+#: lib/Driver.php:2100
 msgid "Recurrence End Month"
 msgstr "Herhalingseindmaand"
 
-#: lib/Driver.php:2072
+#: lib/Driver.php:2083
 msgid "Recurrence End Year"
 msgstr "Herhalingseindjaar"
 
@@ -1819,7 +1819,7 @@ msgstr "Gedeelde agenda's"
 #: templates/perms/perms.inc:174 templates/perms/perms.inc:190
 #: templates/perms/perms.inc:230 templates/perms/perms.inc:261
 #: templates/perms/perms.inc:291 templates/perms/perms.inc:303
-#: templates/perms/perms.inc:337 templates/edit/javascript.inc:265
+#: templates/perms/perms.inc:337 templates/edit/javascript.inc:266
 msgid "Show"
 msgstr "Weergeven"
 
@@ -1860,19 +1860,19 @@ msgstr "Sta_rt"
 msgid "Start Date"
 msgstr "Begindatum"
 
-#: lib/Driver.php:1964 templates/data/export.inc:68
+#: lib/Driver.php:1975 templates/data/export.inc:68
 msgid "Start Day"
 msgstr "Begindag"
 
-#: lib/Driver.php:1975 templates/data/export.inc:87
+#: lib/Driver.php:1986 templates/data/export.inc:87
 msgid "Start Hour"
 msgstr "Beginuur"
 
-#: lib/Driver.php:1985 templates/data/export.inc:102
+#: lib/Driver.php:1996 templates/data/export.inc:102
 msgid "Start Minute"
 msgstr "Beginminuut"
 
-#: lib/Driver.php:1955 templates/data/export.inc:54
+#: lib/Driver.php:1966 templates/data/export.inc:54
 msgid "Start Month"
 msgstr "Beginmaand"
 
@@ -1885,7 +1885,7 @@ msgstr "Begint op"
 msgid "Start Time"
 msgstr "Begintijd"
 
-#: lib/Driver.php:1944 templates/data/export.inc:39
+#: lib/Driver.php:1955 templates/data/export.inc:39
 msgid "Start Year"
 msgstr "Beginjaar"
 
@@ -1952,7 +1952,7 @@ msgstr "Het agenda backend is momenteel niet beschikbaar: %s"
 msgid "The Edit Attendees screen is no longer present. Exiting."
 msgstr "Het Aanwezigen bewerken scherm is niet meer aanwezig. Afsluiten."
 
-#: lib/api.php:1214
+#: lib/api.php:1196
 msgid ""
 "The attendee hasn't been updated because the update was not sent from the "
 "attendee."
@@ -2018,7 +2018,7 @@ msgid "The following is a more detailed description of the event:"
 msgstr ""
 "Het volgende is een meer gedetailleerde beschrijving van de gebeurtenis:"
 
-#: lib/FreeBusy.php:191
+#: lib/FreeBusy.php:194
 #, php-format
 msgid "The free/busy url for %s cannot be retrieved."
 msgstr "De vrij/bezet url voor %s kon niet worden opgehaald."
@@ -2069,7 +2069,7 @@ msgstr "Een fout bij het toevoegen van de gebeurtenis: %s"
 msgid "There was an error editing the event: %s"
 msgstr "Een fout bij het bewerken van de gebeurtenis: %s"
 
-#: lib/api.php:516 lib/api.php:788 lib/api.php:1058
+#: lib/api.php:495 lib/api.php:767 lib/api.php:1040
 msgid "There was an error importing the iCalendar data."
 msgstr "Een fout bij het importeren van de iCalendardata."
 
@@ -2205,7 +2205,7 @@ msgstr "Niet in staat met de SQL server te verbinden."
 msgid "Unable to delete \"%s\": %s"
 msgstr "Niet in staat om \"%s\": %s te verwijderen"
 
-#: lib/api.php:629
+#: lib/api.php:608
 #, php-format
 msgid "Unable to delete calendar \"%s\": %s"
 msgstr "Niet in staat agenda \"%s\" te verwijderen: %s"
@@ -2239,7 +2239,7 @@ msgstr "Niet in staat agenda \"%s\" te hernoemen: %s"
 msgid "Unfiled"
 msgstr "Onbenoemd"
 
-#: lib/api.php:1354 lib/api.php:1390
+#: lib/api.php:1336 lib/api.php:1372
 msgid "Unknown calendar protocol"
 msgstr "Onbekend agendaprotocol"
 
@@ -2252,8 +2252,8 @@ msgstr "Uitschrijven"
 msgid "Unsubscribe from %s"
 msgstr "Uitschrijven van %s"
 
-#: lib/api.php:580 lib/api.php:843 lib/api.php:893 lib/api.php:950
-#: lib/api.php:1078
+#: lib/api.php:559 lib/api.php:822 lib/api.php:872 lib/api.php:932
+#: lib/api.php:1060
 #, php-format
 msgid "Unsupported Content-Type: %s"
 msgstr "Niet ondersteund Content-Type: %s"
@@ -2295,7 +2295,7 @@ msgstr "Dag weergeven"
 msgid "We"
 msgstr "Wo"
 
-#: lib/Driver.php:1200 lib/Scheduler/kronolith.php:287
+#: lib/Driver.php:1202 lib/Scheduler/kronolith.php:287
 #, php-format
 msgid ""
 "We would like to remind you of this upcoming event.\n"
@@ -2523,7 +2523,7 @@ msgstr "Uw standaard agenda"
 msgid "[Manage Calendars]"
 msgstr "[Agenda's beheren]"
 
-#: lib/Driver.php:1458 lib/Driver.php:1478
+#: lib/Driver.php:1462 lib/Driver.php:1482
 msgid "[Unnamed event]"
 msgstr "[Onbenoemde gebeurtenis]"
 

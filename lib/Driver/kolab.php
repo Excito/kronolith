@@ -7,7 +7,7 @@ require_once 'Horde/Identity.php';
  * Horde Kronolith driver for the Kolab IMAP Server.
  * Copyright 2004-2009 The Horde Project (http://www.horde.org/)
  *
- * $Horde: kronolith/lib/Driver/kolab.php,v 1.16.2.31 2010/02/26 21:50:02 wrobel Exp $
+ * $Horde: kronolith/lib/Driver/kolab.php,v 1.16.2.32 2010/09/23 17:59:12 wrobel Exp $
  *
  * See the enclosed file COPYING for license information (LGPL). If you
  * did not receive this file, see http://www.fsf.org/copyleft/lgpl.html.
@@ -178,7 +178,7 @@ class Kronolith_Driver_kolab extends Kronolith_Driver {
 /**
  * Horde Kronolith wrapper to distinguish between both Kolab driver implementations.
  *
- * $Horde: kronolith/lib/Driver/kolab.php,v 1.16.2.31 2010/02/26 21:50:02 wrobel Exp $
+ * $Horde: kronolith/lib/Driver/kolab.php,v 1.16.2.32 2010/09/23 17:59:12 wrobel Exp $
  *
  * Copyright 2004-2009 The Horde Project (http://www.horde.org/)
  *
@@ -1311,7 +1311,7 @@ class Kronolith_Driver_kolab_wrapper_new extends Kronolith_Driver_kolab_wrapper 
 
         global $kronolith_shares;
         $target = &$kronolith_shares->getShare($newCalendar);
-        $folder = $target->get('folder');
+        $folder = $target->getId();
 
         $result = $this->_store->move($eventId, $folder);
         if ($result) {

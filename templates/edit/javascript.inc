@@ -230,6 +230,7 @@ function setStartDate(date)
     $('start_year').value = startYear;
     $('start_month').selectedIndex = startDate.getMonth();
     $('start_day').selectedIndex = startDate.getDate() - 1;
+    updateWday('start_wday');
     updateEndDate();
     // Uncheck recurring weekdays.
     $('mo').checked = false;
