@@ -1,6 +1,6 @@
 <?php
 /**
- * $Horde: kronolith/lib/Maintenance/Task/purge_events.php,v 1.1.2.4 2009/01/06 15:24:46 jan Exp $
+ * $Horde: kronolith/lib/Maintenance/Task/purge_events.php,v 1.1.2.5 2010/06/02 15:54:45 mrubinsk Exp $
  *
  * Maintenance module that purges old events.
  *
@@ -44,7 +44,8 @@ class Maintenance_Task_purge_events extends Maintenance_Task {
         $events = Kronolith::search($query);
         $count = 0;
         foreach ($events as $event) {
-            if (!$event->recurs()) {
+            if (!$event->recurs() ||
+                $event->recurrence->nextRecurrence($del_time) == false) {
                 if ($event->getCalendar() != $kronolith_driver->getCalendar()) {
                     $kronolith_driver->open($event->getCalendar());
                 }

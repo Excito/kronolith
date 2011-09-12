@@ -3,7 +3,7 @@
  * Kronolith_Driver defines an API for implementing storage backends for
  * Kronolith.
  *
- * $Horde: kronolith/lib/Driver.php,v 1.116.2.86 2010/04/22 10:56:48 jan Exp $
+ * $Horde: kronolith/lib/Driver.php,v 1.116.2.90 2010/11/10 17:08:24 jan Exp $
  *
  * @author  Chuck Hagenbuch <chuck@horde.org>
  * @author  Jan Schneider <jan@horde.org>
@@ -758,10 +758,11 @@ class Kronolith_Event {
 
             // Exceptions.
             $exceptions = $this->recurrence->getExceptions();
+            $exdates = array();
             foreach ($exceptions as $exception) {
                 if (!empty($exception)) {
                     list($year, $month, $mday) = sscanf($exception, '%04d%02d%02d');
-                    $exdate = new Horde_Date(array(
+                    $exdates[] = new Horde_Date(array(
                         'year' => $year,
                         'month' => $month,
                         'mday' => $mday,
@@ -769,8 +770,10 @@ class Kronolith_Event {
                         'min' => $this->start->min,
                         'sec' => $this->start->sec,
                     ));
-                    $vEvent->setAttribute('EXDATE', array($exdate));
                 }
+            }
+            if ($exdates) {
+                $vEvent->setAttribute('EXDATE', $exdates);
             }
         }
 
@@ -1053,6 +1056,9 @@ class Kronolith_Event {
         }
         if (!empty($hash['keywords'])) {
             $this->setKeywords(explode(',', $hash['keywords']));
+        }
+        if (!empty($hash['private'])) {
+            $this->private = true;
         }
         if (!empty($hash['start_date'])) {
             $date = explode('-', $hash['start_date']);
@@ -1354,7 +1360,9 @@ class Kronolith_Event {
      */
     function exceptionsList()
     {
-        return implode(', ', array_map(array($this, 'exceptionLink'), $this->recurrence->getExceptions()));
+        $exceptions = $this->recurrence->getExceptions();
+        asort($exceptions);
+        return implode(', ', array_map(array($this, 'exceptionLink'), $exceptions));
     }
 
     function getCalendar()

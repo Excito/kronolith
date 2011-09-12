@@ -1,6 +1,6 @@
 <?php
 /**
- * $Horde: kronolith/lib/Kronolith.php,v 1.263.2.84 2009/11/25 10:21:36 jan Exp $
+ * $Horde: kronolith/lib/Kronolith.php,v 1.263.2.85 2010/07/09 16:42:34 mrubinsk Exp $
  *
  * @package Kronolith
  */
@@ -1506,14 +1506,13 @@ class Kronolith {
 
             case KRONOLITH_ITIP_REQUEST:
             default:
+                $method = 'REQUEST';
                 if ($status['response'] == KRONOLITH_RESPONSE_NONE) {
                     /* Invitation. */
-                    $method = 'REQUEST';
                     $filename = 'event-invitation.ics';
                     $subject = $event->getTitle();
                 } else {
                     /* Update. */
-                    $method = 'ADD';
                     $filename = 'event-update.ics';
                     $subject = sprintf(_("Updated: %s."), $event->getTitle());
                 }

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- $Horde: kronolith/locale/es_ES/help.xml,v 1.1.2.3 2009/02/21 11:16:33 jan Exp $ -->
+<!-- $Horde: kronolith/locale/es_ES/help.xml,v 1.1.2.4 2011/01/10 14:16:20 jan Exp $ -->
 <help>
   <entry id="Overview" md5="1585927d48e4627c792fe0332c41fd39" state="uptodate">
     <title>Kronolith: Introducci&#xF3;n</title>
@@ -78,7 +78,7 @@
     Kronolith puede generar alarmas para los acontecimientos de una agenda. Por omisi&#xF3;n la primera alarma se producir&#xE1; 15 minutos antes de la hora prevista de inicio del acontecimiento, pero se puede configurar (para cada acontecimiento) para que se produzca pr&#xE1;cticamente a cualquier intervalo antes de la hora y fecha previstas.
     </para>
 </entry>
-  <entry id="recurring-events" md5="83a0c3a8a2d2f5ce8b5510bda255643d" state="changed">
+  <entry id="recurring-events" md5="8ea7be1fb6cee0b4131c9a548e25d92f" state="uptodate">
     <title>Acontecimientos recurrentes</title>
     <heading>Acontecimientos recurrentes</heading>
     <para>
@@ -107,7 +107,7 @@
 		&#xC9;ste deber&#xED;a ser un sitio para explicar los distintos tipos de permisos y lo que significan con respencto a acontecimientos y agendas.
 	</para>
 </entry>
-<entry id="embed" state="new">
+<entry id="embed" state="uptodate" md5="f62876bee3350ab0066d4f90feeef297">
 	<title>Incrustado</title>
 	<para>
 		Puede incrustar vistas reducidas de sus agendas en sitios web externos. Puede incrustar las mismas vistas que puede colocar en la p&#xE1;gina portal de Horde. Los siguientes son ejemplos del c&#xF3;digo utilizado para incrustar cada vista en un blog o sitio web externo. Evidentemente tendr&#xE1; que modificar el c&#xF3;digo con la direcci&#xF3;n adecuada del servidor y el nombre de la agenda. El par&#xE1;metro 'container' es arbitrario, pero tiene que coincidir con el id DOM del elemento div y ser &#xFA;nico en el conjunto de la p&#xE1;gina en que lo est&#xE9; incrustando.
